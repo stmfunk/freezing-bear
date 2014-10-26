@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Model/EncyclopediaPage.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *SearchInput;
+@property (weak, nonatomic) IBOutlet UILabel *DisplayTitle;
 @end
 
 @implementation ViewController
@@ -17,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)getSearchFromInput:(id)sender {
+    NSString* title = self.SearchInput.text;
+    EncyclopediaPage* page = [[EncyclopediaPage alloc] initWithUrl:title];
+    self.DisplayTitle.text = page.pageTitle;
 }
 
 - (void)didReceiveMemoryWarning {

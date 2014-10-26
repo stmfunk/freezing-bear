@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46982E2319FD025C000A3573 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46982E2219FD025C000A3573 /* libxml2.dylib */; };
+		46BD0E2E19F9296F005402D7 /* EncyclopediaPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */; };
 		46C0D63919E4318100BDE08D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63819E4318100BDE08D /* main.m */; };
 		46C0D63C19E4318100BDE08D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63B19E4318100BDE08D /* AppDelegate.m */; };
 		46C0D63F19E4318100BDE08D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63E19E4318100BDE08D /* ViewController.m */; };
@@ -14,6 +16,12 @@
 		46C0D64419E4318100BDE08D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C0D64319E4318100BDE08D /* Images.xcassets */; };
 		46C0D64719E4318100BDE08D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C0D64519E4318100BDE08D /* LaunchScreen.xib */; };
 		46C0D65319E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D65219E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.m */; };
+		46F61CF619FD0B1900EBE7E6 /* TFHpple.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F61CED19FD0B1900EBE7E6 /* TFHpple.h */; };
+		46F61CF719FD0B1900EBE7E6 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F61CEE19FD0B1900EBE7E6 /* TFHpple.m */; };
+		46F61CF819FD0B1900EBE7E6 /* TFHppleElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F61CEF19FD0B1900EBE7E6 /* TFHppleElement.h */; };
+		46F61CF919FD0B1900EBE7E6 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F61CF019FD0B1900EBE7E6 /* TFHppleElement.m */; };
+		46F61CFA19FD0B1900EBE7E6 /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F61CF119FD0B1900EBE7E6 /* XPathQuery.h */; };
+		46F61CFB19FD0B1900EBE7E6 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F61CF219FD0B1900EBE7E6 /* XPathQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46982E2219FD025C000A3573 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		46BD0E2C19F9296F005402D7 /* EncyclopediaPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncyclopediaPage.h; path = Model/EncyclopediaPage.h; sourceTree = "<group>"; };
+		46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EncyclopediaPage.m; path = Model/EncyclopediaPage.m; sourceTree = "<group>"; };
 		46C0D63319E4318100BDE08D /* EncyclopediaOfIntegerSequences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncyclopediaOfIntegerSequences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C0D63719E4318100BDE08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C0D63819E4318100BDE08D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +51,12 @@
 		46C0D64C19E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncyclopediaOfIntegerSequencesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C0D65119E4318100BDE08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C0D65219E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncyclopediaOfIntegerSequencesTests.m; sourceTree = "<group>"; };
+		46F61CED19FD0B1900EBE7E6 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		46F61CEE19FD0B1900EBE7E6 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		46F61CEF19FD0B1900EBE7E6 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		46F61CF019FD0B1900EBE7E6 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		46F61CF119FD0B1900EBE7E6 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		46F61CF219FD0B1900EBE7E6 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46982E2319FD025C000A3573 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +78,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46BD0E2B19F92817005402D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46BD0E2C19F9296F005402D7 /* EncyclopediaPage.h */,
+				46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		46C0D62A19E4318100BDE08D = {
 			isa = PBXGroup;
 			children = (
+				46982E2219FD025C000A3573 /* libxml2.dylib */,
 				46C0D63519E4318100BDE08D /* EncyclopediaOfIntegerSequences */,
 				46C0D64F19E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests */,
 				46C0D63419E4318100BDE08D /* Products */,
@@ -86,6 +114,8 @@
 				46C0D63D19E4318100BDE08D /* ViewController.h */,
 				46C0D63E19E4318100BDE08D /* ViewController.m */,
 				46C0D64019E4318100BDE08D /* Main.storyboard */,
+				46BD0E2B19F92817005402D7 /* Model */,
+				46F61CE919FD0B1900EBE7E6 /* hpple */,
 				46C0D64319E4318100BDE08D /* Images.xcassets */,
 				46C0D64519E4318100BDE08D /* LaunchScreen.xib */,
 				46C0D63619E4318100BDE08D /* Supporting Files */,
@@ -119,7 +149,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		46F61CE919FD0B1900EBE7E6 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				46F61CED19FD0B1900EBE7E6 /* TFHpple.h */,
+				46F61CEE19FD0B1900EBE7E6 /* TFHpple.m */,
+				46F61CEF19FD0B1900EBE7E6 /* TFHppleElement.h */,
+				46F61CF019FD0B1900EBE7E6 /* TFHppleElement.m */,
+				46F61CF119FD0B1900EBE7E6 /* XPathQuery.h */,
+				46F61CF219FD0B1900EBE7E6 /* XPathQuery.m */,
+			);
+			path = hpple;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		466ACC2B19FC31F20089DB2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F61CFA19FD0B1900EBE7E6 /* XPathQuery.h in Headers */,
+				46F61CF619FD0B1900EBE7E6 /* TFHpple.h in Headers */,
+				46F61CF819FD0B1900EBE7E6 /* TFHppleElement.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		46C0D63219E4318100BDE08D /* EncyclopediaOfIntegerSequences */ = {
@@ -129,6 +185,7 @@
 				46C0D62F19E4318100BDE08D /* Sources */,
 				46C0D63019E4318100BDE08D /* Frameworks */,
 				46C0D63119E4318100BDE08D /* Resources */,
+				466ACC2B19FC31F20089DB2A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -219,8 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F61CF919FD0B1900EBE7E6 /* TFHppleElement.m in Sources */,
+				46F61CFB19FD0B1900EBE7E6 /* XPathQuery.m in Sources */,
+				46F61CF719FD0B1900EBE7E6 /* TFHpple.m in Sources */,
 				46C0D63F19E4318100BDE08D /* ViewController.m in Sources */,
 				46C0D63C19E4318100BDE08D /* AppDelegate.m in Sources */,
+				46BD0E2E19F9296F005402D7 /* EncyclopediaPage.m in Sources */,
 				46C0D63919E4318100BDE08D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +404,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = EncyclopediaOfIntegerSequences/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +419,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = EncyclopediaOfIntegerSequences/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +483,7 @@
 				46C0D65819E4318100BDE08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46C0D65919E4318100BDE08D /* Build configuration list for PBXNativeTarget "EncyclopediaOfIntegerSequencesTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +492,7 @@
 				46C0D65B19E4318100BDE08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
