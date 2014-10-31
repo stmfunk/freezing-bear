@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OEISPage.h"
 
-@interface EncyclopediaPage : NSObject
-@property (strong,nonatomic,readonly) NSString* pageTitle;
+@interface EncyclopediaPage : OEISPage
 
-- (id)initWithUrl:(NSString*)url;
 @end

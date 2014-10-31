@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "SearchViewController.h"
 #import "Model/EncyclopediaPage.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *SearchInput;
-@property (weak, nonatomic) IBOutlet UILabel *DisplayTitle;
+@property (strong,nonatomic) EncyclopediaPage* page;
 @end
 
 @implementation ViewController
@@ -20,15 +21,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+
 - (IBAction)getSearchFromInput:(id)sender {
     NSString* title = self.SearchInput.text;
-    EncyclopediaPage* page = [[EncyclopediaPage alloc] initWithUrl:title];
-    self.DisplayTitle.text = page.pageTitle;
+    self.page = [[EncyclopediaPage alloc] initWithUrl:title];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"SearchResults"])
+    {
+        SearchViewController *vc = [segue destinationViewController];
+        vc.pageTitle = self.page.pageTitle;
+    }
 }
 
 @end

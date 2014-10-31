@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		466D0C2F1A0287780056FE2D /* SearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 466D0C2D1A0287780056FE2D /* SearchViewController.h */; };
+		466D0C301A0287780056FE2D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466D0C2E1A0287780056FE2D /* SearchViewController.m */; };
 		46982E2319FD025C000A3573 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46982E2219FD025C000A3573 /* libxml2.dylib */; };
+		46A59B911A03B372002EB306 /* OEISPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A59B901A03B372002EB306 /* OEISPage.m */; };
 		46BD0E2E19F9296F005402D7 /* EncyclopediaPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */; };
 		46C0D63919E4318100BDE08D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63819E4318100BDE08D /* main.m */; };
 		46C0D63C19E4318100BDE08D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63B19E4318100BDE08D /* AppDelegate.m */; };
@@ -35,7 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		466D0C2D1A0287780056FE2D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		466D0C2E1A0287780056FE2D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		46982E2219FD025C000A3573 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		46A59B8F1A03B372002EB306 /* OEISPage.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; name = OEISPage.h; path = Model/OEISPage.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		46A59B901A03B372002EB306 /* OEISPage.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; name = OEISPage.m; path = Model/OEISPage.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		46BD0E2C19F9296F005402D7 /* EncyclopediaPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncyclopediaPage.h; path = Model/EncyclopediaPage.h; sourceTree = "<group>"; };
 		46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EncyclopediaPage.m; path = Model/EncyclopediaPage.m; sourceTree = "<group>"; };
 		46C0D63319E4318100BDE08D /* EncyclopediaOfIntegerSequences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncyclopediaOfIntegerSequences.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +88,8 @@
 		46BD0E2B19F92817005402D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46A59B8F1A03B372002EB306 /* OEISPage.h */,
+				46A59B901A03B372002EB306 /* OEISPage.m */,
 				46BD0E2C19F9296F005402D7 /* EncyclopediaPage.h */,
 				46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */,
 			);
@@ -113,6 +122,8 @@
 				46C0D63B19E4318100BDE08D /* AppDelegate.m */,
 				46C0D63D19E4318100BDE08D /* ViewController.h */,
 				46C0D63E19E4318100BDE08D /* ViewController.m */,
+				466D0C2D1A0287780056FE2D /* SearchViewController.h */,
+				466D0C2E1A0287780056FE2D /* SearchViewController.m */,
 				46C0D64019E4318100BDE08D /* Main.storyboard */,
 				46BD0E2B19F92817005402D7 /* Model */,
 				46F61CE919FD0B1900EBE7E6 /* hpple */,
@@ -170,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F61CFA19FD0B1900EBE7E6 /* XPathQuery.h in Headers */,
+				466D0C2F1A0287780056FE2D /* SearchViewController.h in Headers */,
 				46F61CF619FD0B1900EBE7E6 /* TFHpple.h in Headers */,
 				46F61CF819FD0B1900EBE7E6 /* TFHppleElement.h in Headers */,
 			);
@@ -281,7 +293,9 @@
 				46F61CF719FD0B1900EBE7E6 /* TFHpple.m in Sources */,
 				46C0D63F19E4318100BDE08D /* ViewController.m in Sources */,
 				46C0D63C19E4318100BDE08D /* AppDelegate.m in Sources */,
+				46A59B911A03B372002EB306 /* OEISPage.m in Sources */,
 				46BD0E2E19F9296F005402D7 /* EncyclopediaPage.m in Sources */,
+				466D0C301A0287780056FE2D /* SearchViewController.m in Sources */,
 				46C0D63919E4318100BDE08D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
