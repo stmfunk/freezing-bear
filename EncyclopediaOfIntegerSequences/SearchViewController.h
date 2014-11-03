@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchPage.h"
 
-@interface SearchViewController : UIViewController
+@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) NSString* pageTitle;
+@property (strong, nonatomic) SearchPage* searchPage;
 
 @end

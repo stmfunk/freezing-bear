@@ -6,25 +6,28 @@
 //  Copyright (c) 2014 Donal O'Shea. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeScreenViewController.h"
 #import "SearchViewController.h"
-#import "Model/EncyclopediaPage.h"
+#import "Model/SearchPage.h"
 
-@interface ViewController ()
+#define HOME @"Home"
+
+@interface HomeScreenViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *SearchInput;
-@property (strong,nonatomic) EncyclopediaPage* page;
+@property (strong,nonatomic) SearchPage* page;
 @end
 
-@implementation ViewController
+@implementation HomeScreenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[self navigationItem] setTitle:HOME];
 }
 
 - (IBAction)getSearchFromInput:(id)sender {
     NSString* title = self.SearchInput.text;
-    self.page = [[EncyclopediaPage alloc] initWithUrl:title];
+    self.page = [[SearchPage alloc] initWithUrl:title];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +41,7 @@
     if ([[segue identifier] isEqualToString:@"SearchResults"])
     {
         SearchViewController *vc = [segue destinationViewController];
-        vc.pageTitle = self.page.pageTitle;
+        vc.searchPage = self.page;
     }
 }
 
