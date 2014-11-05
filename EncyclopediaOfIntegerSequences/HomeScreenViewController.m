@@ -27,7 +27,7 @@
 
 - (IBAction)getSearchFromInput:(id)sender {
     NSString* title = self.SearchInput.text;
-    self.page = [[SearchPage alloc] initWithUrl:title];
+    self.page = [[SearchPage alloc] initFromSearchTerm:title];
 }
 
 - (void)didReceiveMemoryWarning {

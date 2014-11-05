@@ -12,4 +12,8 @@
 
 @property (strong,nonatomic) NSArray* searchResults;
 
+- (SearchPage*)initFromSearchTerm:(NSString*)searchTerm;
+
++ (NSURL*)searchUrlFromSearchTerm:(NSString*)searchTerm;
+
 @end
