@@ -16,4 +16,5 @@
 
 + (NSURL*)searchUrlFromSearchTerm:(NSString*)searchTerm;
 
++ (NSString*)fixFormattingOfSearchTerm:(NSString*)searchTerm;
 @end
