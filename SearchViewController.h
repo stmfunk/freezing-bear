@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchPage.h"
+#import "EncyclopediaPage.h"
 
 @interface SearchViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 @property (strong,nonatomic) SearchPage* searchPage;
 @property (strong,nonatomic) NSArray* results;
+@property (strong,nonatomic) NSDictionary* resultPairs;
 
 @end

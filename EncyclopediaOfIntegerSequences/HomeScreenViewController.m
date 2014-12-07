@@ -41,9 +41,6 @@
     if ([[segue identifier] isEqualToString:@"SearchResults"])
     {
         SearchViewController *vc = [segue destinationViewController];
-        for (NSString* string in self.page.searchResults) {
-            NSLog(@"%@", string);
-        }
         vc.searchPage = self.page;
     }
 }

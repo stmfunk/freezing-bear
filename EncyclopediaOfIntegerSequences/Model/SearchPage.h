@@ -10,7 +10,7 @@
 
 @interface SearchPage : OEISPage
 
-@property (strong,nonatomic) NSArray* searchResults;
+@property (strong,nonatomic) NSDictionary* searchResults;
 
 - (SearchPage*)initFromSearchTerm:(NSString*)searchTerm;
 

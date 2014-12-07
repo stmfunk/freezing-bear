@@ -19,14 +19,21 @@
 @dynamic pageUrl;
 @dynamic htmlData;
 
-- (NSArray*)searchResults {
-    TFHpple *tutorialsParser = [TFHpple hppleWithHTMLData:self.htmlData];
+- (NSDictionary*)searchResults {
+    TFHpple *pageParser = [TFHpple hppleWithHTMLData:self.htmlData];
     NSString* titlePath = @"//td/a";
-    NSMutableArray* returnResults = [[NSMutableArray alloc] init];
-    NSArray *tutorialsNodes = [tutorialsParser searchWithXPathQuery:titlePath];
-    for (TFHppleElement *element in tutorialsNodes) {
-        [returnResults addObject:[[element firstChild] content]];
+    NSString* descriptionPath = @"//tr/td[3][@valign='top']";
+    
+    NSMutableDictionary* returnResults = [[NSMutableDictionary alloc] init];
+    NSArray *titlesNodes = [pageParser searchWithXPathQuery:titlePath];
+    NSArray *descriptionNodes = [pageParser searchWithXPathQuery:descriptionPath];
+    NSInteger iterator = 0;
+    for (TFHppleElement *element in titlesNodes) {
+        [returnResults setObject:
+         [[[descriptionNodes[iterator++] firstChild] content] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
+                          forKey:[[element firstChild] content]];
     }
+    ;
     return returnResults;
 }
 
