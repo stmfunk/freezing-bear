@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[self navigationItem] setTitle:self.dataPage.pageTitle];
     // Do any additional setup after loading the view.
 }
 

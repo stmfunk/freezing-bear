@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "EncyclopediaViewController.h"
 
 @interface SearchViewController ()
 
@@ -77,9 +78,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"EncyclopediaPage"])
-    {
+    if ([[segue identifier] isEqualToString:@"EncyclopediaPage"]) {
         UITableViewCell* selectedCell = (UITableViewCell *)sender;
+        EncyclopediaPage* currentPage = [[EncyclopediaPage alloc] initWithIndex:selectedCell.textLabel.text];
+        EncyclopediaViewController* vc = [segue destinationViewController];
+        vc.dataPage = currentPage;
     }
 }
 

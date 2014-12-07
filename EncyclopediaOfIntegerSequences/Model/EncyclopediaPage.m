@@ -16,5 +16,10 @@
 
 @implementation EncyclopediaPage
 
+- (EncyclopediaPage*)initWithIndex:(NSString *)index {
+    self = [super init];
+    NSString* url = [@"https://oeis.org/" stringByAppendingString:index];
+    return [self initWithUrl:url];
+}
 
 @end

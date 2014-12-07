@@ -11,4 +11,6 @@
 
 @interface EncyclopediaPage : OEISPage
 
+- (EncyclopediaPage*)initWithIndex:(NSString*)index;
+
 @end
