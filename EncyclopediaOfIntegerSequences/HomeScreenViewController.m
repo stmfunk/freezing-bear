@@ -15,6 +15,8 @@
 @interface HomeScreenViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *SearchInput;
 @property (strong,nonatomic) SearchPage* page;
+@property (weak, nonatomic) IBOutlet UIImageView *HomeLogo;
+@property (weak, nonatomic) IBOutlet UIButton *SearchButton;
 @end
 
 @implementation HomeScreenViewController
@@ -23,6 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [[self navigationItem] setTitle:HOME];
+    [self.SearchInput setReturnKeyType:UIReturnKeyDone];
+    self.SearchInput.delegate = self;
 }
 
 - (IBAction)getSearchFromInput:(id)sender {
@@ -43,6 +47,33 @@
         SearchViewController *vc = [segue destinationViewController];
         vc.searchPage = self.page;
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    textField.frame = CGRectMake(textField.frame.origin.x, (textField.frame.origin.y - 100.0), textField.frame.size.width, textField.frame.size.height);
+    self.HomeLogo.frame = CGRectMake(self.HomeLogo.frame.origin.x, (self.HomeLogo.frame.origin.y - 100.0), self.HomeLogo.frame.size.width, self.HomeLogo.frame.size.height);
+    self.SearchButton.frame = CGRectMake(self.SearchButton.frame.origin.x, (self.SearchButton.frame.origin.y - 100.0), self.SearchButton.frame.size.width, self.SearchButton.frame.size.height);
+    [UIView commitAnimations];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    textField.frame = CGRectMake(textField.frame.origin.x, (textField.frame.origin.y + 100.0), textField.frame.size.width, textField.frame.size.height);
+    self.HomeLogo.frame = CGRectMake(self.HomeLogo.frame.origin.x, (self.HomeLogo.frame.origin.y + 100.0), self.HomeLogo.frame.size.width, self.HomeLogo.frame.size.height);
+    self.SearchButton.frame = CGRectMake(self.SearchButton.frame.origin.x, (self.SearchButton.frame.origin.y + 100.0), self.SearchButton.frame.size.width, self.SearchButton.frame.size.height);
+    [UIView commitAnimations];
 }
 
 @end

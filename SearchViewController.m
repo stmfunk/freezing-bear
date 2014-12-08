@@ -7,7 +7,7 @@
 //
 
 #import "SearchViewController.h"
-#import "EncyclopediaViewController.h"
+#import "EncyclopaediaViewController.h"
 
 @interface SearchViewController ()
 
@@ -80,8 +80,8 @@
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"EncyclopediaPage"]) {
         UITableViewCell* selectedCell = (UITableViewCell *)sender;
-        EncyclopediaPage* currentPage = [[EncyclopediaPage alloc] initWithIndex:selectedCell.textLabel.text];
-        EncyclopediaViewController* vc = [segue destinationViewController];
+        EncyclopaediaPage* currentPage = [[EncyclopaediaPage alloc] initWithIndex:selectedCell.textLabel.text];
+        EncyclopaediaViewController* vc = [segue destinationViewController];
         vc.dataPage = currentPage;
     }
 }

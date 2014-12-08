@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeScreenViewController : UIViewController
+@interface HomeScreenViewController : UIViewController <UITextFieldDelegate>
 
-
+- (void)textFieldDidBeginEditing:(UITextField *)textField;
+- (void)textFieldDidEndEditing:(UITextField *)textField;
 @end
 

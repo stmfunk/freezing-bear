@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchPage.h"
-#import "EncyclopediaPage.h"
+#import "EncyclopaediaPage.h"
 
 @interface SearchViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 @property (strong,nonatomic) SearchPage* searchPage;

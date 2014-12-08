@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "OEISPage.h"
 
-@interface EncyclopediaPage : OEISPage
+@interface EncyclopaediaPage : OEISPage
 
-- (EncyclopediaPage*)initWithIndex:(NSString*)index;
+- (EncyclopaediaPage*)initWithIndex:(NSString*)index;
 
 @end

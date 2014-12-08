@@ -13,7 +13,7 @@
 		468508891A1FB7B600D25AE1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468508871A1FB7B600D25AE1 /* SearchViewController.m */; };
 		46982E2319FD025C000A3573 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46982E2219FD025C000A3573 /* libxml2.dylib */; };
 		46A59B911A03B372002EB306 /* OEISPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A59B901A03B372002EB306 /* OEISPage.m */; };
-		46BD0E2E19F9296F005402D7 /* EncyclopediaPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */; };
+		46BD0E2E19F9296F005402D7 /* EncyclopaediaPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BD0E2D19F9296F005402D7 /* EncyclopaediaPage.m */; };
 		46C0D63919E4318100BDE08D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63819E4318100BDE08D /* main.m */; };
 		46C0D63C19E4318100BDE08D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63B19E4318100BDE08D /* AppDelegate.m */; };
 		46C0D63F19E4318100BDE08D /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D63E19E4318100BDE08D /* HomeScreenViewController.m */; };
@@ -21,8 +21,9 @@
 		46C0D64419E4318100BDE08D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C0D64319E4318100BDE08D /* Images.xcassets */; };
 		46C0D64719E4318100BDE08D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C0D64519E4318100BDE08D /* LaunchScreen.xib */; };
 		46C0D65319E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C0D65219E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.m */; };
-		46E267681A346ABA009E33AB /* EncyclopediaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E267661A346ABA009E33AB /* EncyclopediaViewController.h */; };
-		46E267691A346ABA009E33AB /* EncyclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E267671A346ABA009E33AB /* EncyclopediaViewController.m */; };
+		46E267681A346ABA009E33AB /* EncyclopaediaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E267661A346ABA009E33AB /* EncyclopaediaViewController.h */; };
+		46E267691A346ABA009E33AB /* EncyclopaediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E267671A346ABA009E33AB /* EncyclopaediaViewController.m */; };
+		46E2676B1A35B1AC009E33AB /* CamiD29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 46E2676A1A35B1AC009E33AB /* CamiD29.jpg */; };
 		46F61CF619FD0B1900EBE7E6 /* TFHpple.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F61CED19FD0B1900EBE7E6 /* TFHpple.h */; };
 		46F61CF719FD0B1900EBE7E6 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F61CEE19FD0B1900EBE7E6 /* TFHpple.m */; };
 		46F61CF819FD0B1900EBE7E6 /* TFHppleElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F61CEF19FD0B1900EBE7E6 /* TFHppleElement.h */; };
@@ -49,8 +50,8 @@
 		46982E2219FD025C000A3573 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		46A59B8F1A03B372002EB306 /* OEISPage.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; name = OEISPage.h; path = Model/OEISPage.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		46A59B901A03B372002EB306 /* OEISPage.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; name = OEISPage.m; path = Model/OEISPage.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		46BD0E2C19F9296F005402D7 /* EncyclopediaPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncyclopediaPage.h; path = Model/EncyclopediaPage.h; sourceTree = "<group>"; };
-		46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EncyclopediaPage.m; path = Model/EncyclopediaPage.m; sourceTree = "<group>"; };
+		46BD0E2C19F9296F005402D7 /* EncyclopaediaPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncyclopaediaPage.h; path = Model/EncyclopaediaPage.h; sourceTree = "<group>"; };
+		46BD0E2D19F9296F005402D7 /* EncyclopaediaPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EncyclopaediaPage.m; path = Model/EncyclopaediaPage.m; sourceTree = "<group>"; };
 		46C0D63319E4318100BDE08D /* EncyclopediaOfIntegerSequences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncyclopediaOfIntegerSequences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C0D63719E4318100BDE08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C0D63819E4318100BDE08D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,8 +65,9 @@
 		46C0D64C19E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncyclopediaOfIntegerSequencesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C0D65119E4318100BDE08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46C0D65219E4318100BDE08D /* EncyclopediaOfIntegerSequencesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncyclopediaOfIntegerSequencesTests.m; sourceTree = "<group>"; };
-		46E267661A346ABA009E33AB /* EncyclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncyclopediaViewController.h; sourceTree = "<group>"; };
-		46E267671A346ABA009E33AB /* EncyclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncyclopediaViewController.m; sourceTree = "<group>"; };
+		46E267661A346ABA009E33AB /* EncyclopaediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncyclopaediaViewController.h; sourceTree = "<group>"; };
+		46E267671A346ABA009E33AB /* EncyclopaediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncyclopaediaViewController.m; sourceTree = "<group>"; };
+		46E2676A1A35B1AC009E33AB /* CamiD29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CamiD29.jpg; path = Images.xcassets/CamiD29.jpg; sourceTree = "<group>"; };
 		46F61CED19FD0B1900EBE7E6 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		46F61CEE19FD0B1900EBE7E6 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		46F61CEF19FD0B1900EBE7E6 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -100,8 +102,8 @@
 				46A59B901A03B372002EB306 /* OEISPage.m */,
 				462385591A03B95000D1149D /* SearchPage.h */,
 				4623855A1A03B95000D1149D /* SearchPage.m */,
-				46BD0E2C19F9296F005402D7 /* EncyclopediaPage.h */,
-				46BD0E2D19F9296F005402D7 /* EncyclopediaPage.m */,
+				46BD0E2C19F9296F005402D7 /* EncyclopaediaPage.h */,
+				46BD0E2D19F9296F005402D7 /* EncyclopaediaPage.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -135,8 +137,8 @@
 				46C0D63E19E4318100BDE08D /* HomeScreenViewController.m */,
 				468508861A1FB7B600D25AE1 /* SearchViewController.h */,
 				468508871A1FB7B600D25AE1 /* SearchViewController.m */,
-				46E267661A346ABA009E33AB /* EncyclopediaViewController.h */,
-				46E267671A346ABA009E33AB /* EncyclopediaViewController.m */,
+				46E267661A346ABA009E33AB /* EncyclopaediaViewController.h */,
+				46E267671A346ABA009E33AB /* EncyclopaediaViewController.m */,
 				46BD0E2B19F92817005402D7 /* Model */,
 				46F61CE919FD0B1900EBE7E6 /* hpple */,
 				46C0D64319E4318100BDE08D /* Images.xcassets */,
@@ -149,6 +151,7 @@
 		46C0D63619E4318100BDE08D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46E2676A1A35B1AC009E33AB /* CamiD29.jpg */,
 				46C0D63719E4318100BDE08D /* Info.plist */,
 				46C0D63819E4318100BDE08D /* main.m */,
 			);
@@ -195,7 +198,7 @@
 				46F61CFA19FD0B1900EBE7E6 /* XPathQuery.h in Headers */,
 				4623855B1A03B95000D1149D /* SearchPage.h in Headers */,
 				46F61CF619FD0B1900EBE7E6 /* TFHpple.h in Headers */,
-				46E267681A346ABA009E33AB /* EncyclopediaViewController.h in Headers */,
+				46E267681A346ABA009E33AB /* EncyclopaediaViewController.h in Headers */,
 				468508881A1FB7B600D25AE1 /* SearchViewController.h in Headers */,
 				46F61CF819FD0B1900EBE7E6 /* TFHppleElement.h in Headers */,
 			);
@@ -285,6 +288,7 @@
 				46C0D64219E4318100BDE08D /* Main.storyboard in Resources */,
 				46C0D64719E4318100BDE08D /* LaunchScreen.xib in Resources */,
 				46C0D64419E4318100BDE08D /* Images.xcassets in Resources */,
+				46E2676B1A35B1AC009E33AB /* CamiD29.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +314,8 @@
 				46A59B911A03B372002EB306 /* OEISPage.m in Sources */,
 				4623855C1A03B95000D1149D /* SearchPage.m in Sources */,
 				468508891A1FB7B600D25AE1 /* SearchViewController.m in Sources */,
-				46E267691A346ABA009E33AB /* EncyclopediaViewController.m in Sources */,
-				46BD0E2E19F9296F005402D7 /* EncyclopediaPage.m in Sources */,
+				46E267691A346ABA009E33AB /* EncyclopaediaViewController.m in Sources */,
+				46BD0E2E19F9296F005402D7 /* EncyclopaediaPage.m in Sources */,
 				46C0D63919E4318100BDE08D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

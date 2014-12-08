@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Donal O'Shea. All rights reserved.
 //
 
-#import "EncyclopediaViewController.h"
+#import "EncyclopaediaViewController.h"
 
-@interface EncyclopediaViewController ()
+@interface EncyclopaediaViewController ()
 
 @end
 
-@implementation EncyclopediaViewController
+@implementation EncyclopaediaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

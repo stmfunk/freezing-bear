@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Donal O'Shea. All rights reserved.
 //
 
-#import "EncyclopediaPage.h"
+#import "EncyclopaediaPage.h"
 #import <Foundation/Foundation.h>
 
 
-@interface EncyclopediaPage()
+@interface EncyclopaediaPage()
 
 @end
 
-@implementation EncyclopediaPage
+@implementation EncyclopaediaPage
 
-- (EncyclopediaPage*)initWithIndex:(NSString *)index {
+- (EncyclopaediaPage*)initWithIndex:(NSString *)index {
     self = [super init];
     NSString* url = [@"https://oeis.org/" stringByAppendingString:index];
     return [self initWithUrl:url];

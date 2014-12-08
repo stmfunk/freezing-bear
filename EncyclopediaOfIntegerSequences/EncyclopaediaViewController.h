@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EncyclopediaPage.h"
+#import "EncyclopaediaPage.h"
 
-@interface EncyclopediaViewController : UIViewController
-
-@property (strong,nonatomic) EncyclopediaPage* dataPage;
+@interface EncyclopaediaViewController : UIViewController
+@property (strong,nonatomic) EncyclopaediaPage* dataPage;
 
 @end
