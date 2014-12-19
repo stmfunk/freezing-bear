@@ -48,4 +48,38 @@
     return [super init];
 }
 
+- (NSArray*)sequenceTitles {
+    if (!_sequenceTitles) {
+        NSMutableArray* createTitles = [[NSMutableArray alloc] init];
+        NSString* titlePath = @"//tr/td[1]/a";
+        TFHpple *pageParser = [TFHpple hppleWithHTMLData:self.htmlData];
+        NSArray *titlesNodes = [pageParser searchWithXPathQuery:titlePath];
+        for (TFHppleElement *element in titlesNodes) {
+            [createTitles addObject:[[element firstChild] content]];
+        }
+        _sequenceTitles = createTitles;
+    }
+    return _sequenceTitles;
+}
+
+- (NSDictionary*)sequenceDescriptionByTitle {
+    if (!_sequenceDescriptionByTitle) {
+        TFHpple *pageParser = [TFHpple hppleWithHTMLData:self.htmlData];
+        
+        NSMutableDictionary* createSeqDict = [[NSMutableDictionary alloc] init];
+        NSString* descriptionPath = @"//tr/td[3][@valign='top']";
+        
+        NSArray *descriptionNodes = [pageParser searchWithXPathQuery:descriptionPath];
+        NSInteger iterator = 0;
+        for (TFHppleElement* element in descriptionNodes) {
+            if (self.sequenceTitles[iterator] == NULL) break;
+            [createSeqDict setObject:[[[element firstChild] content]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:self.sequenceTitles[iterator++]];
+        }
+        _sequenceDescriptionByTitle = createSeqDict;
+    }
+    return _sequenceDescriptionByTitle;
+}
+
+
+
 @end

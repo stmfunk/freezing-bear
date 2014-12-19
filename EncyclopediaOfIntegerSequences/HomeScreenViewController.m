@@ -17,6 +17,8 @@
 @property (strong,nonatomic) SearchPage* page;
 @property (weak, nonatomic) IBOutlet UIImageView *HomeLogo;
 @property (weak, nonatomic) IBOutlet UIButton *SearchButton;
+@property (weak, nonatomic) UITextField *currentlyEditingTextField;
+@property (nonatomic) NSInteger keyboardOffset;
 @end
 
 @implementation HomeScreenViewController
@@ -27,6 +29,26 @@
     [[self navigationItem] setTitle:HOME];
     [self.SearchInput setReturnKeyType:UIReturnKeyDone];
     self.SearchInput.delegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:)name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:)name:UIKeyboardDidHideNotification object:nil];
+    self.keyboardOffset = 0;
+    
+}
+
+- (void)keyboardWasShown:(NSNotification*)keyboardNotification {
+    CGSize keyboardSize = [[[keyboardNotification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
+    CGFloat topOfKeyboard = screenHeight - keyboardSize.height;
+    CGPoint textFieldPosition = self.currentlyEditingTextField.frame.origin;
+    if ((textFieldPosition.y + self.currentlyEditingTextField.frame.size.height) > topOfKeyboard) {
+        self.keyboardOffset = topOfKeyboard - (textFieldPosition.y + self.currentlyEditingTextField.frame.size.height) - 5;
+        [self moveVerticallyEverythingBy:self.keyboardOffset];
+    }
+}
+
+- (void)keyboardWasHidden:(NSNotification*)keyboardNotification {
+    [self moveVerticallyEverythingBy:-self.keyboardOffset];
 }
 
 - (IBAction)getSearchFromInput:(id)sender {
@@ -55,24 +77,24 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    textField.frame = CGRectMake(textField.frame.origin.x, (textField.frame.origin.y - 100.0), textField.frame.size.width, textField.frame.size.height);
-    self.HomeLogo.frame = CGRectMake(self.HomeLogo.frame.origin.x, (self.HomeLogo.frame.origin.y - 100.0), self.HomeLogo.frame.size.width, self.HomeLogo.frame.size.height);
-    self.SearchButton.frame = CGRectMake(self.SearchButton.frame.origin.x, (self.SearchButton.frame.origin.y - 100.0), self.SearchButton.frame.size.width, self.SearchButton.frame.size.height);
-    [UIView commitAnimations];
+    self.currentlyEditingTextField = textField;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
+    self.currentlyEditingTextField = NULL;
+}
+
+- (void)moveVerticallyEverythingBy:(NSInteger)nPixels {
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationBeginsFromCurrentState:YES];
-    textField.frame = CGRectMake(textField.frame.origin.x, (textField.frame.origin.y + 100.0), textField.frame.size.width, textField.frame.size.height);
-    self.HomeLogo.frame = CGRectMake(self.HomeLogo.frame.origin.x, (self.HomeLogo.frame.origin.y + 100.0), self.HomeLogo.frame.size.width, self.HomeLogo.frame.size.height);
-    self.SearchButton.frame = CGRectMake(self.SearchButton.frame.origin.x, (self.SearchButton.frame.origin.y + 100.0), self.SearchButton.frame.size.width, self.SearchButton.frame.size.height);
+    for (id element in self.view.subviews) {
+        if ([element respondsToSelector:@selector(frame)]) {
+            UIView* elementView = (UIView*)element;
+            elementView.frame = CGRectMake(elementView.frame.origin.x, (elementView.frame.origin.y + nPixels), elementView.frame.size.width, elementView.frame.size.height);
+        }
+    }
     [UIView commitAnimations];
 }
 

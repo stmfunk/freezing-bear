@@ -12,5 +12,8 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
+- (void)keyboardWasShown:(NSNotification*)keyboardNotification;
+- (void)keyboardWasHidden:(NSNotification*)keyboardNotification;
+- (void)moveVerticallyEverythingBy:(NSInteger)nPixels;
 @end
 

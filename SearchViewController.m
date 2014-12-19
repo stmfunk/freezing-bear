@@ -33,14 +33,14 @@
 
 - (NSArray*)results {
     if (!_results) {
-        _results = [self.resultPairs allKeys];
+        _results = self.searchPage.sequenceTitles;
     }
     return _results;
 }
 
 - (NSDictionary*)resultPairs {
     if (!_resultPairs) {
-        _resultPairs = self.searchPage.searchResults;
+        _resultPairs = self.searchPage.sequenceDescriptionByTitle;
     }
     return _resultPairs;
 }
@@ -66,9 +66,7 @@
     }
     
     cell.textLabel.text = [self.results objectAtIndex:indexPath.row];
-    
     cell.detailTextLabel.text = self.resultPairs[[self.results objectAtIndex:indexPath.row]];
-    
     return cell;
 }
 

@@ -12,5 +12,4 @@
 @interface EncyclopaediaPage : OEISPage
 
 - (EncyclopaediaPage*)initWithIndex:(NSString*)index;
-
 @end

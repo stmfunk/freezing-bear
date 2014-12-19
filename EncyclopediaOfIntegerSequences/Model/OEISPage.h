@@ -10,6 +10,10 @@
 
 @interface OEISPage : NSObject
 @property (strong,nonatomic,readonly) NSString* pageTitle;
+@property (strong,nonatomic) NSArray* sequenceTitles;
+@property (strong,nonatomic) NSDictionary* sequenceDescriptionByTitle;
+
 
 - (id)initWithUrl:(NSString*)url;
+
 @end

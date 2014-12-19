@@ -21,7 +21,7 @@
 
 - (NSDictionary*)searchResults {
     TFHpple *pageParser = [TFHpple hppleWithHTMLData:self.htmlData];
-    NSString* titlePath = @"//td/a";
+    NSString* titlePath = @"//tr/td[1]/a";
     NSString* descriptionPath = @"//tr/td[3][@valign='top']";
     
     NSMutableDictionary* returnResults = [[NSMutableDictionary alloc] init];
@@ -29,11 +29,11 @@
     NSArray *descriptionNodes = [pageParser searchWithXPathQuery:descriptionPath];
     NSInteger iterator = 0;
     for (TFHppleElement *element in titlesNodes) {
-        [returnResults setObject:
+        if (iterator >= 10) break;
+            [returnResults setObject:
          [[[descriptionNodes[iterator++] firstChild] content] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
                           forKey:[[element firstChild] content]];
     }
-    ;
     return returnResults;
 }
 

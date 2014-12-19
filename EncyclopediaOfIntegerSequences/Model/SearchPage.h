@@ -15,6 +15,5 @@
 - (SearchPage*)initFromSearchTerm:(NSString*)searchTerm;
 
 + (NSURL*)searchUrlFromSearchTerm:(NSString*)searchTerm;
-
 + (NSString*)fixFormattingOfSearchTerm:(NSString*)searchTerm;
 @end
