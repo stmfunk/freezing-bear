@@ -12,7 +12,6 @@
 @interface OEISPage()
 @property (strong,nonatomic) NSURL* pageUrl;
 @property (strong,nonatomic) NSString* pageTitle;
-@property (strong,nonatomic) NSData* htmlData;
 
 - (instancetype)init;
 @end
@@ -48,14 +47,17 @@
     return [super init];
 }
 
+- (NSString*)titlePath {
+    return @"//tr/td[1]/a";
+}
+
 - (NSArray*)sequenceTitles {
     if (!_sequenceTitles) {
         NSMutableArray* createTitles = [[NSMutableArray alloc] init];
-        NSString* titlePath = @"//tr/td[1]/a";
         TFHpple *pageParser = [TFHpple hppleWithHTMLData:self.htmlData];
-        NSArray *titlesNodes = [pageParser searchWithXPathQuery:titlePath];
+        NSArray *titlesNodes = [pageParser searchWithXPathQuery:self.titlePath];
         for (TFHppleElement *element in titlesNodes) {
-            [createTitles addObject:[[element firstChild] content]];
+            [createTitles addObject:[[[element firstChild] content]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
         }
         _sequenceTitles = createTitles;
     }

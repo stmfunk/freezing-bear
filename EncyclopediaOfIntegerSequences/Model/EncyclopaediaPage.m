@@ -7,6 +7,7 @@
 //
 
 #import "EncyclopaediaPage.h"
+#import "TFHpple.h"
 #import <Foundation/Foundation.h>
 
 
@@ -20,6 +21,20 @@
     self = [super init];
     NSString* url = [@"https://oeis.org/" stringByAppendingString:index];
     return [self initWithUrl:url];
+}
+
+- (NSString*)titlePath {
+    return @"//tr/td[1][@valign='top']";
+}
+
+- (NSString*)sequenceString {
+    if (!_sequenceString) {
+        TFHpple *sequenceParser = [TFHpple hppleWithHTMLData:self.htmlData];
+        NSString* sequencePath = @"//tt";
+        NSArray *sequenceNode = [sequenceParser searchWithXPathQuery:sequencePath];
+        _sequenceString = [[[sequenceNode firstObject] firstChild] content];
+    }
+    return _sequenceString;
 }
 
 @end

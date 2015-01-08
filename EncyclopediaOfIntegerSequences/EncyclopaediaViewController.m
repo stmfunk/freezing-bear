@@ -9,6 +9,8 @@
 #import "EncyclopaediaViewController.h"
 
 @interface EncyclopaediaViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *DescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *SequenceLabel;
 
 @end
 
@@ -18,6 +20,8 @@
     [super viewDidLoad];
     
     [[self navigationItem] setTitle:self.dataPage.pageTitle];
+    [self.DescriptionLabel setText:self.dataPage.sequenceDescriptionByTitle[self.dataPage.sequenceTitles[0]]];
+    [self.SequenceLabel setText:self.dataPage.sequenceString];
     // Do any additional setup after loading the view.
 }
 
