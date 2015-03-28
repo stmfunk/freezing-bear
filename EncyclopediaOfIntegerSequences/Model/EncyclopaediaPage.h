@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TFHppleElement.h"
 #import "OEISPage.h"
 
 @interface EncyclopaediaPage : OEISPage
 
 - (EncyclopaediaPage*)initWithIndex:(NSString*)index;
+- (NSString*)getContentOfSection:(NSString*)section;
+
++ (NSString*)getAllTextFrom:(TFHppleElement*)element;
+
 @property (strong,nonatomic) NSString* sequenceString;
 @end
